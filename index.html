@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Aurora Casino, sala giochi dimostrativa con crediti virtuali.">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4nNWXwQ3DMAhFbVbIMNmhY0TKGD1ljEgZozt0mMyQnqhU5BgMLsj/iBLx/se2RE4F7edylepWrdORae2n8K/GNRDwbk57gXdzCgHch5ye88v0P0S4R+3ncpkSQPeWFMwjsGpcABq7dgxjJnDnVpNCeAK55R1ocbi9H/0ALPecA6kCWJ9ZCUgRoGdjDoQdQQ+Y2hjEh1ADIjmITbdAAiM9/ajwd0AFcOey1b0aoKfGBaBxa+I3AfRSPEBpXZIKY9fGv05HDk/g6957P8DkgRY8m6dEtmOU53r+AWFeYtFj+QhIAAAAAElFTkSuQmCC">
+  <title>Aurora Casino | Sala giochi demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="art.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Vai ai contenuti</a>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigazione principale">
+      <button class="brand" data-view="all" aria-label="Aurora Casino, lobby"><span class="logo" aria-hidden="true">✧</span><span>AURORA<small>CASINO</small></span></button>
+      <div class="sidebar-body">
+        <button class="side-profile" data-panel="profile"><span aria-hidden="true">♙</span><span><strong>Profilo demo</strong><small>Personalizza il nickname</small></span></button>
+        <nav aria-label="Giochi" class="nav">
+          <button data-view="all"><span aria-hidden="true">▦</span> Lobby</button>
+          <button data-view="slots"><span aria-hidden="true">♢</span> Slot</button>
+          <button data-view="live"><span aria-hidden="true">◉</span> Tavoli simulati</button>
+          <button data-view="new"><span aria-hidden="true">✦</span> Nuovi giochi</button>
+          <button data-view="tables"><span aria-hidden="true">♤</span> Giochi da casinò</button>
+          <button data-view="jackpot"><span aria-hidden="true">♛</span> Jackpot demo</button>
+        </nav>
+        <p class="side-caption">IL TUO SPAZIO</p>
+        <nav aria-label="Il tuo spazio" class="nav">
+          <button data-view="favorites"><span aria-hidden="true">♡</span> Preferiti</button>
+          <button data-view="recent"><span aria-hidden="true">▷</span> Giocati di recente</button>
+          <button data-panel="history"><span aria-hidden="true">◷</span> Cronologia</button>
+          <button data-panel="wallet"><span aria-hidden="true">◇</span> Portafoglio</button>
+        </nav>
+        <div class="sidebar-bottom"><span class="demo-dot"></span><div><strong>Modalità demo</strong><p>Solo crediti virtuali</p></div></div>
+      </div>
+    </aside>
+    <header class="topbar">
+      <button class="icon-button menu" id="menu" aria-controls="sidebar" aria-expanded="false" aria-label="Apri menu">☰</button>
+      <button class="brand mobile-brand" data-view="all" aria-label="Aurora Casino, lobby"><span class="logo" aria-hidden="true">✧</span><span>AURORA<small>CASINO</small></span></button>
+      <form id="searchForm" role="search">
+        <label class="visually-hidden" for="search">Cerca un gioco</label>
+        <span class="search-icon" aria-hidden="true"></span>
+        <input id="search" type="search" placeholder="Cerca un gioco…" autocomplete="off">
+        <kbd title="Scorciatoia di ricerca">/</kbd>
+      </form>
+      <div class="top-actions">
+        <button class="wallet-button" data-panel="wallet" aria-label="Apri il portafoglio demo"><span class="chip-icon" aria-hidden="true">◈</span><span><small>Crediti demo</small><strong id="balance">1.000</strong></span><span class="wallet-plus" aria-hidden="true">+</span></button>
+        <button class="icon-button profile-button" data-panel="profile" aria-label="Profilo demo"><span id="initial">O</span></button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="hero-tag"><span aria-hidden="true">✦</span> SALA GIOCHI DEMO</p>
+          <h1 id="heroTitle">La tua sala giochi<br>con 1.000 crediti</h1>
+          <p id="heroCaption">Prova slot e tavoli con crediti virtuali.</p>
+          <button class="primary hero-button" id="explore"><span id="heroAction">Esplora i giochi</span> <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <div class="hero-switch" aria-label="Seleziona un banner">
+        <button data-slide="0" aria-label="La sala giochi" aria-pressed="true"></button>
+        <button data-slide="1" aria-label="Tavoli simulati" aria-pressed="false"></button>
+        <button data-slide="2" aria-label="Slot demo" aria-pressed="false"></button>
+      </div>
+      <nav class="lobby-tabs" aria-label="Categorie della lobby">
+        <button data-view="all">Home</button><button data-view="slots">Slot</button>
+        <button data-view="live">Tavoli simulati</button><button data-view="new">Nuovi giochi</button>
+        <button data-view="tables">Giochi da casinò</button><button data-view="jackpot">Jackpot demo</button>
+      </nav>
+      <section class="catalog" id="catalog" aria-labelledby="catalogTitle">
+        <div class="catalog-header">
+          <div><h2 id="catalogTitle" tabindex="-1">Giochi in evidenza</h2><p id="catalogSubtitle">Scopri le slot e i tavoli della lobby demo.</p></div>
+          <div class="filters" aria-label="Filtra i giochi">
+            <button data-view="all">Tutti</button>
+            <button data-view="slots">Slot</button>
+            <button data-view="tables">Tavoli</button>
+            <button data-view="favorites" aria-label="Preferiti">♡</button>
+          </div>
+        </div>
+        <div class="cards" id="cards"></div>
+      </section>
+      <section class="catalog secondary-catalog" id="lobbyTables" aria-labelledby="tableTitle">
+        <div class="catalog-header">
+          <h2 id="tableTitle">Tavoli simulati</h2><button class="secondary" data-view="live">Vedi tutti <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="cards" id="tableCards"></div>
+      </section>
+      <footer><span>Aurora Casino</span><p>Simulazione di gioco. I crediti virtuali non hanno valore monetario.</p><button data-panel="info">Guida demo</button></footer>
+    </main>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-header">
+      <div><p id="dialogKicker">AURORA CASINO</p><h2 id="dialogTitle"></h2></div>
+      <button type="button" class="icon-button" id="closeDialog" aria-label="Chiudi">×</button>
+    </div>
+    <div id="dialogContent"></div>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
